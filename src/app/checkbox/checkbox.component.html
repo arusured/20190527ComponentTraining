@@ -1,0 +1,9 @@
+<p *ngFor="let checkbox of checkboxs">
+  {{checkbox.id}}
+  <input type="checkbox"
+  id="{{checkbox.id + '-' + checkbox.value}}"
+  name="{{checkbox.label}}"
+  value="{{checkbox.value}}"
+  [(ngModel)]="checkbox.checked">
+  <label for="{{checkbox.id + '-' + checkbox.value}}">{{checkbox.value}}</label>
+</p>
